@@ -30,3 +30,32 @@ This is a pre-generated manifest to deploy the Azure Voting App on Kubernetes. I
 
 Location: [edaena/azure-voting-app-manifest](https://github.com/edaena/azure-voting-app-manifest)
 
+## Setup Bedrock Pipelines using SPK
+This section is a work in progress and it follows the steps from the Bedrock [guideline](https://github.com/CatalystCode/spk/blob/master/docs/project-service-management-guide.md#initializing-the-high-level-definition-repository) to manage a project using `spk`.
+
+These are the steps that have been tested so far:
+- Create an Azure project in Azure DevOps called `ohbedrock`
+- Create three repositories in the `ohbedrock` project: `ohhld`, `ohmanifests`, `ohinfra`
+- Create a PAT with access to: Build (read & execute), Code (read, write, manage), Variable Groups (read, create, manage)
+- Pre-populate the `azure-devops` section of the `spk-config.yaml`. See [this](https://github.com/CatalystCode/spk/blob/master/spk-config.yaml) template.
+- run `spk init -f spk-config.yaml`
+- Clone the repos: `ohhld` and `ohmanifests`
+- `cd ohhld`
+- `spk hld init`
+- Change the `component.yaml` to use the Azure Voting App fabrikate component instead of the cloud native stack:
+```
+name: default-component
+subcomponents:
+  - name: azure-vote
+    method: git
+    source: 'https://github.com/edaena/azure-vote-hld.git'
+```
+- Commit all the files to the `ohhld` repo
+- `spk hld install-manifest-pipeline`
+- Successfully installed pipeline in the `ohbedrock` project
+- Verified that the pipeline automatically generated the manifests and committed them to the `ohmanifests` repository
+
+
+To be continued:
+- onboard the azure voting servie
+- generate the pipeline to go from service to docker image
