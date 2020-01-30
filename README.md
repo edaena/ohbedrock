@@ -14,6 +14,11 @@ Hacking the Azure voting app on Bedrock.
 ## Repos
 These are the repositories relevant for a bedrock workflow using the Azure voting app.
 
+#### Source: Azure Voting App
+This is the repository for the python voting app.
+
+Location: [edaena/azure-voting-app-redis](https://github.com/edaena/azure-voting-app-redis)
+
 #### Helm Chart: Azure Voting App
 By default the chart uses the ACR docker images, as it can be seen [here](https://github.com/edaena/helm-charts/blob/da7a3eb19cdc1d661bc0ff3b1eb88c64fd7e9f08/chart-source/azure-vote/values.yaml#L10).
 
