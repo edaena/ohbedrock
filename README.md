@@ -21,12 +21,12 @@ Location: [edaena/helm-charts/azure-vote](https://github.com/edaena/helm-charts/
 
 
 #### Fabrikate Component: Azure Voting App
-This is the Fabrikate definition that refers to the Helm Chart for the Azure Voting App.
+This is the Fabrikate definition that refers to the Helm Chart for the voting app.
 
 Location: [edaena/azure-vote-hld](https://github.com/edaena/azure-vote-hld)
 
 #### Generated Manifest: Azure Voting App
-This is a pre-generated manifest to deploy the Azure Voting App on Kubernetes. It uses the DockerHub images `edsa14/azure-vote-front:v1` and `edsa14/redis:v1`.
+This is a pre-generated manifest for the voting app. It is ready to be deployed to a Kubernetes cluster as-is. It uses the DockerHub images `edsa14/azure-vote-front:v1` and `edsa14/redis:v1`.
 
 Location: [edaena/azure-voting-app-manifest](https://github.com/edaena/azure-voting-app-manifest)
 
