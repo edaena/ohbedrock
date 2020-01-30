@@ -38,7 +38,7 @@ Location: [edaena/azure-voting-app-manifest](https://github.com/edaena/azure-vot
 ## Setup Bedrock Pipelines using SPK
 This section is a work in progress and it follows the steps from the Bedrock [guideline](https://github.com/CatalystCode/spk/blob/master/docs/project-service-management-guide.md#initializing-the-high-level-definition-repository) to manage a project using `spk`.
 
-These are the steps that have been tested so far:
+These are the steps that have been tested:
 - Create an Azure project in Azure DevOps called `ohbedrock`
 - Create three repositories in the `ohbedrock` project: `ohhld`, `ohmanifests`, `ohinfra`
 - Create a PAT with access to: Build (read & execute), Code (read, write, manage), Variable Groups (read, create, manage)
