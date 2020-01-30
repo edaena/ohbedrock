@@ -57,5 +57,5 @@ subcomponents:
 
 
 To be continued:
-- onboard the azure voting servie
+- onboard the azure voting service
 - generate the pipeline to go from service to docker image
