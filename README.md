@@ -1,4 +1,4 @@
-# ohbedrock
+# OH Bedrock
 Hacking the Azure voting app on Bedrock.
 
 ### Docker images
