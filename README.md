@@ -126,10 +126,12 @@ Objective: Understand the pros and cons of working with raw resource manifests
 Goal: Make a change to the voting app resource manifest. Verify it was automatically deployed via GitOps.
 
 Steps:
-- Change the docker image tag for the voting app from `v1` to `v2` in the `azure-vote.yaml`. New image name: `edsa14/azure-vote-front:v2`
+- Change the docker image tag for the voting app from `v1` to `v3` in the `azure-vote.yaml`. New image name: `edsa14/azure-vote-front:v2`
 - Push the change to the repository
 
-To-do: Include image of new app
+The v3 application should have the title in blue:
+![voting app](./images/azure-vote.png)
+
 
 Challenge 1.2
 
@@ -142,7 +144,7 @@ Steps:
 - Clone the [repository](https://github.com/edaena/helm-charts) with the helm chart for the azure voting app. 
 - `cd helm-charts`
 - `helm template ./azure-vote`
-- Change the image tag in `values.yaml` to `v2`
+- Change the image tag in `values.yaml` to `v3`
 - `helm template ./azure-vote`
 
 Verify that the generated resource manifest has the `v2` image tag.
