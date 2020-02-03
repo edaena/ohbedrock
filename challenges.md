@@ -121,7 +121,7 @@ spec:
 ```
 
 ### Challenge 1.1: Resource Manifest
-Objective: Understand the pros and cons of working with raw resource manifests.
+Objective: Understand the pros and cons of working with raw resource manifests
 
 Goal: Make a change to the voting app resource manifest. Verify it was automatically deployed via GitOps.
 
@@ -134,7 +134,7 @@ To-do: Include image of new app
 Challenge 1.2
 
 ### Challenge 1.2: Helm (optional)
-Objective: Generate a resource manifest from a helm chart 
+Objective: Generate a resource manifest from a helm chart
 
 Goal: Get a basic understanding of the pros/cons of Helm.
 
@@ -148,8 +148,47 @@ Steps:
 Verify that the generated resource manifest has the `v2` image tag.
 
 ### Challenge 1.3: From Helm to High Level Deployment Definitions
-Objective: Generate a resource manifest from an HLD
+Objective: Generate resource manifests for different environments from an HLD.
 
-Goal: Understand the benefits of using HLDs for large applications with several deploying environments.
+Goal: Understand the benefits of using HLDs for large applications for different deployment environments.
 
 Steps:
+- Clone the [Azure voting app HLD repository](https://github.com/edaena/azure-vote-hld)
+- `fab install`
+- `fab generate common`
+- `fab generate prod`
+
+Compare the `common` and `prod` manifests.
+
+### Challenge 2: HLD to resource manifests DevOps
+Objective: Automate generating resource manifests from HLDs.
+
+Goal: Set up the `hld -> manifests` pipeline via `spk`
+
+Relevant commands:
+- `spk hld init`
+- `spk hld install-manifest-pipeline`
+
+### Challenge 3: App to HLD and ACR DevOps
+Objective: Automate generating HLDs from an application repository
+
+Goal: Set up a Bedrock project with the `app -> hld` pipeline and the `app -> acr` pipeline
+
+Relevant commands:
+- `spk project init`
+- `spk project create-variable-group`
+- `spk project install-lifecycle-pipeline`
+
+### Challenge 4: Make a revision
+Objective: Make a change to the voting application and create a revision with spk
+
+Relevant commands:
+- `spk service create-revision`
+
+Challenge 5: Introspection
+
+Challenge 6: Observability
+
+Challenge 7: Deploying cluster in multiple regions
+
+Challenge 8: Rings
