@@ -126,7 +126,7 @@ Objective: Understand the pros and cons of working with raw resource manifests
 Goal: Make a change to the voting app resource manifest. Verify it was automatically deployed via GitOps.
 
 Steps:
-- Change the docker image tag for the voting app from `v1` to `v2` in the `azure-vote.yaml`. New image name: `edsa14/azure-vote-front:v1`
+- Change the docker image tag for the voting app from `v1` to `v2` in the `azure-vote.yaml`. New image name: `edsa14/azure-vote-front:v2`
 - Push the change to the repository
 
 To-do: Include image of new app
