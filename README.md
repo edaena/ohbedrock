@@ -23,7 +23,7 @@ For help setting up the PAT, see
 To-do: include diagram of artifacts (repos)
 
 ### Challenge 1: GitOps and AKS
-Objective: Understand GitOps. Refer to [A first Workload with Bedrock](https://github.com/microsoft/bedrock/tree/docs_spk/docs/firstWorkload#create-an-azure-service-principal).
+Objective: Understand GitOps. Refer to [A first Workload with Bedrock](https://github.com/microsoft/bedrock/tree/docs_spk/docs/firstWorkload).
 
 Goals:
 - Deploy a Bedrock single-key vault cluster
