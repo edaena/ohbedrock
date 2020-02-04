@@ -180,7 +180,7 @@ Setup:
 Relevant commands:
 - `spk project init`
 - `spk project create-variable-group`
-- Run `/scripts/setup.sh` (Creates a resource group, storage account, table, and adds variables to variable group)
+- Run `bash /scripts/setup.sh create` (Creates a resource group, storage account, table, and adds variables to variable group)
 - `spk project install-lifecycle-pipeline`
 
 ### Challenge 4: Make a revision
@@ -190,6 +190,28 @@ Relevant commands:
 - `spk service create-revision`
 
 ### Challenge 5: Introspection
+Objective: View information about the application deployment and GitOps workflow.
+
+Steps:
+- Get the `introspection` values using `bash /scripts/setup.sh values`
+- Add the required `introspection` configuration values in `spk-config.yaml`
+```
+introspection:
+  dashboard:
+    image: "samiyaakhtar/spektate:prod" # Use this default docker image unless you would like to use a custom one
+    name: "spektate"
+  azure: # This is the storage account for the service introspection tool.
+    account_name: "<your-alias>" # Must be defined to run spk deployment commands
+    table_name: "storage-account-table-name" # Must be defined to run spk deployment commands
+    partition_key: "storage-account-table-partition-key" # Must be defined to run spk deployment commands
+    key: "storage-access-key" # Must be defined to run spk deployment commands. Use ${env:INTROSPECTION_STORAGE_ACCESS_KEY} and set it in .env file
+```
+
+Relevant commands:
+- `spk init`
+- `spk deployment get`
+- `spk-deployment dashboard`
+
 
 ### Challenge 6: Observability
 
