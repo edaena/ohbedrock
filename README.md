@@ -8,9 +8,9 @@ To-do: include overall diagram of the system
 ### Challenges
 - [Challenge 0: Setup Tools/Artifacts](./challenges/0.md)
 - [Challenge 1: GitOps and AKS](./challenges/1.md)
-  - Challenge 1.1: Resource Manifest
-  - Challenge 1.2: Helm (optional)
-  - Challenge 1.3: From Helm to High Level Deployment (HLD) Definitions
+  - [Challenge 1.1: Resource Manifest](./challenges/1-1.md)
+  - [Challenge 1.2: Helm (optional)](./challenges/1-2.md)
+  - [Challenge 1.3: From Helm to High Level Deployment (HLD) Definitions](./challenges/1-3.md)
 - [Challenge 2: HLD to resource manifests DevOps](./challenges/2.md)
 - [Challenge 3: App to HLD and ACR DevOps](./challenges/3.md)
 - [Challenge 4: Make a revision](./challenges/4.md)

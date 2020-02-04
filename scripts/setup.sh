@@ -12,7 +12,7 @@
 # Get alias
 
 user_alias=$(az ad signed-in-user show | jq '.mailNickname' -r)
-rg=$user_alias'-spkrg'
+rg=$user_alias'-spk-rg'
 sa=$user_alias'spksa'
 tn='spkdeployments'
 pk='azure-vote'
