@@ -212,6 +212,8 @@ Relevant commands:
 - `spk deployment get`
 - `spk-deployment dashboard`
 
+To-do: Add image of the dashboard
+
 
 ### Challenge 6: Observability
 
