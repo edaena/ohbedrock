@@ -130,7 +130,7 @@ Steps:
 - Push the change to the repository
 
 The v3 application should have the title in blue:
-![voting app](./images/azure-vote.png)
+![voting app v2](./images/azure-vote-v2.png)
 
 
 ### Challenge 1.2: Helm (optional)
