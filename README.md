@@ -133,8 +133,6 @@ The v3 application should have the title in blue:
 ![voting app](./images/azure-vote.png)
 
 
-Challenge 1.2
-
 ### Challenge 1.2: Helm (optional)
 Objective: Generate a resource manifest from a helm chart
 
@@ -176,9 +174,13 @@ Objective: Automate generating HLDs from an application repository
 
 Goal: Set up a Bedrock project with the `app -> hld` pipeline and the `app -> acr` pipeline
 
+Setup:
+- Create an azure storage account
+
 Relevant commands:
 - `spk project init`
 - `spk project create-variable-group`
+- Run `/scripts/setup.sh` (Creates a resource group, storage account, table, and adds variables to variable group)
 - `spk project install-lifecycle-pipeline`
 
 ### Challenge 4: Make a revision
@@ -187,10 +189,10 @@ Objective: Make a change to the voting application and create a revision with sp
 Relevant commands:
 - `spk service create-revision`
 
-Challenge 5: Introspection
+### Challenge 5: Introspection
 
-Challenge 6: Observability
+### Challenge 6: Observability
 
-Challenge 7: Deploying cluster in multiple regions
+### Challenge 7: Deploying cluster in multiple regions
 
-Challenge 8: Rings
+### Challenge 8: Rings
