@@ -52,6 +52,7 @@ ssh-keygen -b 4096 -t rsa -f cluster-deployment/keys/node-ssh-key
 
 # Save values in a file:
 > infra-values.txt
+echo "Subscription id: $id" >> infra-values.txt
 echo "Resource group: $rg" >> infra-values.txt
 echo "Storage account: $sa" >> infra-values.txt
 echo "Storage account key: $a_key" >> infra-values.txt
