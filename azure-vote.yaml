@@ -16,7 +16,7 @@ spec:
         "beta.kubernetes.io/os": linux
       containers:
       - name: azure-vote-back
-        image: edsa14/redis:v1
+        image: redis
         resources:
           requests:
             cpu: 100m
