@@ -39,10 +39,27 @@ echo "Create storage account: $sa"
 echo "Storage account key: $a_key"
 echo "Container $sac"
 
+# Create Deploy Key
+echo ""
+echo "Create deployment key"
+mkdir -p cluster-deployment
+mkdir -p cluster-deployment/keys
+ssh-keygen -b 4096 -t rsa -f cluster-deployment/keys/gitops-ssh-key
+
+echo ""
+echo "Create node key"
+ssh-keygen -b 4096 -t rsa -f cluster-deployment/keys/node-ssh-key
+
 # Save values in a file:
 > infra-values.txt
 echo "Resource group: $rg" >> infra-values.txt
 echo "Storage account: $sa" >> infra-values.txt
 echo "Storage account key: $a_key" >> infra-values.txt
 echo "Container: $sac" >> infra-values.txt
+echo "" >> infra-values.txt
+echo "Deploy key path: $dir/cluster-deployment/keys/gitops-ssh-key" >> infra-values.txt
+echo "Deploy public key: $dir/cluster-deployment/keys/gitops-ssh-key.pub"
+echo "" >> infra-values.txt
+echo "Deploy key path: $dir/cluster-deployment/keys/node-ssh-key" >> infra-values.txt
+echo "Deploy public key: $dir/cluster-deployment/keys/node-ssh-key.pub"
 echo "Saved infra values at $dir/infra-values.txt"
