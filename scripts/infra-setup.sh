@@ -46,31 +46,48 @@ echo "Container $sac"
 # Create Deploy Key
 echo ""
 echo "Create deployment key"
-mkdir -p cluster-deployment
-mkdir -p cluster-deployment/keys
-ssh-keygen -b 4096 -t rsa -f cluster-deployment/keys/gitops-ssh-key
+mkdir -p deployment
+mkdir -p deployment/keys
+ssh-keygen -b 4096 -t rsa -f deployment/keys/gitops-ssh-key
 
 echo ""
 echo "Create node key"
-ssh-keygen -b 4096 -t rsa -f cluster-deployment/keys/node-ssh-key
+ssh-keygen -b 4096 -t rsa -f deployment/keys/node-ssh-key
 
 # Save values in a file:
 > infra-values.txt
 echo "Subscription id: $id" >> infra-values.txt
+echo "ARM_SUBSCRIPTION_ID: $id" >> infra-values.txt
+
+echo "" >> infra-values.txt
 echo "cluster_name: $cluster_name" >> infra-values.txt
 echo "dns_prefix: $cluster_name" >> infra-values.txt
+
+eho "" >> infra-values.txt
 echo "resource_group_name: $rg" >> infra-values.txt
 echo "global_resource_group_name (common infra): $rgi" >> infra-values.txt
+
+eho "" >> infra-values.txt
+echo "keyvault_name: $rgi-spk-keyvault" >> infra-values.txt
+echo "subnet_name: $rgi-spk-mysubnet" >> infra-values.txt
+echo "vnet_name: $rgi-spk-vnet" >> infra-values.txt
 echo "keyvault_resource_group: $rgi" >> infra-values.txt
+
+echo "" >> infra-values.txt
 echo "storage_account_name: $sa" >> infra-values.txt
 echo "access_key (for storage account): $a_key" >> infra-values.txt
 echo "container_name: $sac" >> infra-values.txt
-echo "gitops_path: $dir/cluster-deployment/keys/gitops-ssh-key" >> infra-values.txt
+
 echo "" >> infra-values.txt
-echo "Deploy key path: $dir/cluster-deployment/keys/gitops-ssh-key" >> infra-values.txt
-echo "Deploy public key file: $dir/cluster-deployment/keys/gitops-ssh-key.pub" >> infra-values.txt
+echo "gitops_ssh_key: $dir/deployment/keys/gitops-ssh-key" >> infra-values.txt
+#echo "gitops_path: $dir/deployment/keys/gitops-ssh-key" >> infra-values.txt
+
 echo "" >> infra-values.txt
-echo "Node key path: $dir/cluster-deployment/keys/node-ssh-key" >> infra-values.txt
-echo "Node public key file: $dir/cluster-deployment/keys/node-ssh-key.pub" >> infra-values.txt
+echo "Deploy key path: $dir/deployment/keys/gitops-ssh-key" >> infra-values.txt
+echo "Deploy public key file: $dir/deployment/keys/gitops-ssh-key.pub" >> infra-values.txt
+
+echo "" >> infra-values.txt
+echo "Node key path: $dir/deployment/keys/node-ssh-key" >> infra-values.txt
+echo "Node public key file: $dir/deployment/keys/node-ssh-key.pub" >> infra-values.txt
 echo ""
 echo "Saved infra values at $dir/infra-values.txt"
