@@ -58,9 +58,9 @@ echo "Storage account key: $a_key" >> infra-values.txt
 echo "Container: $sac" >> infra-values.txt
 echo "" >> infra-values.txt
 echo "Deploy key path: $dir/cluster-deployment/keys/gitops-ssh-key" >> infra-values.txt
-echo "Deploy public key: $dir/cluster-deployment/keys/gitops-ssh-key.pub" >> infra-values.txt
+echo "Deploy public key file: $dir/cluster-deployment/keys/gitops-ssh-key.pub" >> infra-values.txt
 echo "" >> infra-values.txt
 echo "Node key path: $dir/cluster-deployment/keys/node-ssh-key" >> infra-values.txt
-echo "Node public key: $dir/cluster-deployment/keys/node-ssh-key.pub" >> infra-values.txt
+echo "Node public key file: $dir/cluster-deployment/keys/node-ssh-key.pub" >> infra-values.txt
 echo ""
 echo "Saved infra values at $dir/infra-values.txt"
