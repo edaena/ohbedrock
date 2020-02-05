@@ -7,7 +7,7 @@ To-do: include overall diagram of the system
 
 ### Challenges
 - [Challenge 0: Setup Tools/Artifacts](./challenges/0.md)
-- [Challenge 1: GitOps and AKS](./challenges/1.md)
+- [Challenge 1: GitOps and AKS](./challenges/1-0.md)
   - [Challenge 1.1: Resource Manifest](./challenges/1-1.md)
   - [Challenge 1.2: Helm (optional)](./challenges/1-2.md)
   - [Challenge 1.3: From Helm to High Level Deployment (HLD) Definitions](./challenges/1-3.md)
@@ -18,3 +18,20 @@ To-do: include overall diagram of the system
 - Challenge 6: Observability
 - Challenge 7: Deploying cluster in multiple regions
 - Challenge 8: Rings
+
+### Glossary
+Work in progress... Add definitions
+- AKS cluster
+- ACR
+- Container
+- Deploy Key
+- Fabrikate
+- Flux
+- GitOps
+- Helm chart
+- High Level Deployment definition (HLD)
+- HLD repo
+- Node Key
+- Resource Manifest
+- Resource Manifest repo
+- Terraform
