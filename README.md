@@ -28,10 +28,12 @@ Work in progress... Add definitions
 - Fabrikate
 - Flux
 - GitOps
-- Helm chart
-- High Level Deployment definition (HLD)
-- HLD repo
+- Helm
+- HLD, High Level Deployment definition
+- HLD repository
 - Node Key
 - Resource Manifest
-- Resource Manifest repo
+- Resource Manifest repository
+- Ring
+- SPK
 - Terraform
