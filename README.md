@@ -20,7 +20,6 @@ To-do: include overall diagram of the system
 - Challenge 8: Rings
 
 ### Glossary
-Work in progress... Add definitions
 - AKS cluster
 - ACR
 - Container
