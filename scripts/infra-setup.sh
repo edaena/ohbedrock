@@ -22,23 +22,23 @@ echo "User alias: $user_alias"
 rgi=$user_alias'-spkinfra-rg'
 rg=$user_alias'-spkcluster-rg'
 echo "Create resource group: $rg"
-#resource_group=$(az group create -l westus -n $rg)
+resource_group=$(az group create -l westus -n $rg)
 
 echo "Create resource group: $rgi"
-#resource_group=$(az group create -l westus -n $rgi)
+resource_group=$(az group create -l westus -n $rgi)
 
 echo "Create service principal"
-#> service-principal.json
-#sp=$(az ad sp create-for-rbac --scopes "/subscriptions/"$id >> service-principal.json)
+> service-principal.json
+sp=$(az ad sp create-for-rbac --scopes "/subscriptions/"$id >> service-principal.json)
 
 dir=$(pwd)
 echo "Created service principal at $dir/service-principal.json"
 
 # Create storage account
 echo "Create storage account: $sa"
-#storage=$(az storage account create -n $sa -g $rg)
-#a_key=$(az storage account keys list -n $sa -g $rg | jq '.[0].value')
-#container=$(az storage container create --name $sac --account-key $a_key --account-name $sa)
+storage=$(az storage account create -n $sa -g $rg)
+a_key=$(az storage account keys list -n $sa -g $rg | jq '.[0].value')
+container=$(az storage container create --name $sac --account-key $a_key --account-name $sa)
 
 echo "Storage account key: $a_key"
 echo "Container $sac"
