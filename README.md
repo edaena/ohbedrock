@@ -5,7 +5,7 @@ The following challenges are part of a workflow to understand and deploy an appl
 
 To-do: include overall diagram of the system
 
-### Challenges
+### Challenges (Detailed version)
 - [Challenge 0: Setup Tools/Artifacts](./challenges/0.md)
 - [Challenge 1: GitOps and AKS](./challenges/1-0.md)
   - [Challenge 1.1: Resource Manifest](./challenges/1-1.md)
