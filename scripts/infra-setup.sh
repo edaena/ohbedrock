@@ -63,12 +63,12 @@ echo "" >> infra-values.txt
 echo "cluster_name: $cluster_name" >> infra-values.txt
 echo "dns_prefix: $cluster_name" >> infra-values.txt
 
-eho "" >> infra-values.txt
+echo "" >> infra-values.txt
 echo "resource_group_name: $rg" >> infra-values.txt
 echo "global_resource_group_name (common infra): $rgi" >> infra-values.txt
 
-eho "" >> infra-values.txt
-echo "keyvault_name: $rgi-spk-keyvault" >> infra-values.txt
+echo "" >> infra-values.txt
+echo "keyvault_name: $user_alias""spkkv" >> infra-values.txt
 echo "subnet_name: $rgi-spk-mysubnet" >> infra-values.txt
 echo "vnet_name: $rgi-spk-vnet" >> infra-values.txt
 echo "keyvault_resource_group: $rgi" >> infra-values.txt
