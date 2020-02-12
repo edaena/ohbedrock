@@ -20,19 +20,17 @@ To-do: include overall diagram of the system
 - Challenge 8: Rings
 
 ### Glossary
-- AKS cluster
-- ACR
-- Container
-- Deploy Key
-- Fabrikate
-- Flux
-- GitOps
-- Helm
-- HLD, High Level Deployment definition
-- HLD repository
-- Node Key
-- Resource Manifest
-- Resource Manifest repository
+- [AKS cluster](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough)
+- [ACR](https://azure.microsoft.com/en-us/services/container-registry/)
+- [Container](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/container-docker-introduction/docker-defined)
+- [Deploy Key](https://github.com/microsoft/bedrock/tree/docs_spk/docs/firstWorkload#generate-a-deploy-key-for-the-gitops-resource-manifest-repo)
+- [Fabrikate](https://github.com/microsoft/fabrikate)
+- [Flux](https://www.weave.works/oss/flux/)
+- [GitOps](https://github.com/microsoft/bedrock/blob/docs_spk/docs/why-gitops.md)
+- [Helm](https://helm.sh/)
+- [HLD, High Level Deployment definition](https://github.com/microsoft/bedrock/blob/docs_spk/docs/high-level-definitions.md)
+- [Node Key](https://github.com/microsoft/bedrock/tree/docs_spk/docs/firstWorkload#create-a-node-key)
+- [Resource Manifest](https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/)
 - Ring
-- SPK
-- Terraform
+- [SPK](https://github.com/CatalystCode/spk)
+- [Terraform](https://www.terraform.io/)
